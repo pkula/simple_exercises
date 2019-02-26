@@ -1,7 +1,7 @@
 from decimal import *
 
 
-
+#ex1
 def generate_postal_code(start_code, finish_code):
     """Return the list of postal codes between start_code and finish_code.
     start_code and finish_code are string"""
@@ -14,9 +14,9 @@ def generate_postal_code(start_code, finish_code):
                 break
             codes.append("{}-{}{}".format(first_num, "0"*(3-len(str(sec_num))), sec_num))
     return codes
-print(generate_postal_code("79-900","80-155"))
 
 
+#ex2
 def find_miss_elements(check_list,n):
     """Return the list of missing values between 1 and n.
     check_list is a list 
@@ -26,9 +26,9 @@ def find_miss_elements(check_list,n):
         if i not in check_list:
             miss_el.append(i)
     return miss_el
-print(find_miss_elements([2,3,7,4,9],10))
 
 
+#ex3
 def generate_num(start, stop, step):
     """Return list of Decimal numbers between start and stop where is step.
     start, stop and step are float"""
@@ -38,4 +38,3 @@ def generate_num(start, stop, step):
         numbers.append(Decimal(start)-Decimal('0.0000')) # 
         start = start + step
     return numbers
-print(generate_num(2,5.5,0.1))
